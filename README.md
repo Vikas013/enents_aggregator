@@ -9,20 +9,20 @@ Usage:
 2. Clone the repository or download the script.
 
     ```bash
-    git clone https://github.com/your-username/user-activity-aggregator.git
-    cd user-activity-aggregator
+    git clone https://github.com/vikas013/events_aggregator.git
+    cd events_aggregator
     ```
 
 3. Make the script executable.
 
     ```bash
-    chmod +x user_activity_aggregator.py
+    chmod +x aggregate_events.sh
     ```
 
 4. Run the script with input and output file paths.
 
     ```bash
-    ./user_activity_aggregator.py -i input_file.json -o output_file.json
+    ./aggregate_events.sh -i input.json -o output.json
     ```
 
     - `-i` or `--input`: Specify the input JSON file path containing user activity events.
