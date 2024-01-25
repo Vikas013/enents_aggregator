@@ -1,0 +1,12 @@
+[
+    {"userId": 1, "eventType": "unknown", "timestamp": 1672444801},
+    {"userId": 1, "eventType": "likeReceived", "timestamp": 1672444802},
+    {"userId": 1, "eventType": "comment", "timestamp": 1672531201},
+    {"userId": 2, "eventType": "comment", "timestamp": 1672631202},
+    {"userId": 2, "eventType": "post", "timestamp": 1672631202},
+    {"userId": 3, "eventType": "post", "timestamp": 1672731202},
+    {"userId": 4, "eventType": "post", "timestamp": 1672831202},
+
+    {"userId": 5, "eventType": "post", "timestamp": 1672931202}
+
+]

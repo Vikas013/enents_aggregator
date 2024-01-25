@@ -1,0 +1,53 @@
+Test Case 1: Process Events Initial
+-------------------------------------
+Input Events:
+[
+    {"userId": 1, "eventType": "post", "timestamp": 1672444801},
+    {"userId": 1, "eventType": "likeReceived", "timestamp": 1672444802},
+    {"userId": 2, "eventType": "comment", "timestamp": 1672531201}
+]
+
+Expected Output:
+{
+    "2023-01-30": {
+        1: {"post": 1, "likeReceived": 1, "comment": 0},
+        2: {"post": 0, "likeReceived": 0, "comment": 1}
+    }
+}
+
+
+Test Case 2: Process Events Additional
+---------------------------------------
+Input Events:
+[
+    {"userId": 1, "eventType": "comment", "timestamp": 1672531202},
+    {"userId": 2, "eventType": "post", "timestamp": 1672631202},
+    {"userId": 3, "eventType": "post", "timestamp": 1672731202}
+]
+
+Expected Output:
+{
+    "2023-01-30": {
+        1: {"post": 1, "likeReceived": 1, "comment": 0},
+        2: {"post": 0, "likeReceived": 0, "comment": 1}
+    },
+    "2023-01-31": {
+        1: {"comment": 1},
+        2: {"post": 1},
+        3: {"post": 1}
+    }
+}
+
+
+Test Case 3: Process Events Unknown Event Type
+----------------------------------------------
+Input Events:
+[
+    {"userId": 1, "eventType": "unknown", "timestamp": 1672831203}
+]
+
+Expected Output:
+Warning: Unknown event type 'unknown' for user 1 on 2023-01-31
+{}
+
+
